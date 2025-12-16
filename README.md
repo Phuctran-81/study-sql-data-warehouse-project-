@@ -1,25 +1,84 @@
-# study-sql-data-warehouse-project-
-# Project Overview
-This MYSQL project is a cloned mimic version of Instagram's database. It is used to perform data analysis for real world business related questions and scenarios. MYSQL is the language used to crate database and analyse it. And Tableau is used to visualize the dataset.
+# Data Warehouse Proect
+This Data Warehouse project demonstrates building a comprehensive data warehouse to generating actionable insights.
+---
+## Data Architecture
+The data architecture for this project follows Medallion Architecture Bronze, Silver, and Gold layers:
+1. **Bronze Layer:** Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
+2. **Silver Layer:** This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
+3. **Gold Layer:** Houses business-ready data modeled into a star schema required for reporting and analytics.
+---
+## Project Overview
+This project involves:
+1. **Data Architecture:** Designing a Modern Data Warehouse using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
+2. **ETL Pipelines:** Extracting, transforming, and loading data from source systems into the warehouse.
+3. **Data Modeling:** Developing fact and dimension tables optimized for analytical queries.
+4. **Analytics & Reporting:** Create SQL-based reports and dashboards for actionable insights.
+### This repository includes:
+- SQL Development
+- Data Architect
+- Data Engineering
+- ETL Pipeline Developer
+- Data Modeling
+- Data Analytics
+---
+## Important Links & Tools
+- Datasets:
+- DrawIO:
+- Notion:
+---
+## Project Requorements
+### Building the Data Warehouse (Data Engineering)
+#### Objective
+Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+#### Specifications
+- **Data Sources:** Import data from two source systems (ERP and CRM) provided as CSV files.
+- **Data Quality:** Cleanse and resolve data quality issues prior to analysis.
+- **Integration:** Combine both sources into a single, user-friendly data model designed for analitical queries.
+- **Scope:** Focus on the latest dataset only; historization of data is not required.
+- **Documentation:** Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+---
+## BI: Analytics & Reporting (Data Analysis)
+#### Objective
+Develop SQL-based analytics to deliver detailed insights into:
+- **Customer Behavior**
+- **Product Performance**
+- **Sales Trends**
 
-# Data and Exploration 
-## Dataset
-The database ``` ig_clone``` is created using SQL. 
-There are 7 tables: Users, Photos, Likes, Comments, Follows, Tags, Photo Tags.
+## Repository Structure
+```
+data-warehouse-project/
+|                                          #
+├── datasets/                              # Raw datasets used for the project (ERP and CRM data)
+|                                          
+├── docs/                                  # Project documentation and architecture details
+|    ├── etl.drawio
+|    ├── data_architecture.drawio
+|    ├── data_catalog.md
+|    ├── data_flow.drawio
+|    ├── naming-conventions.md
+|
+├──scripts/
+|    ├── bronze/
+|    ├── silver/
+|    ├── gold/
+|
+├──tests/
+|
+├── README.md
+├── LICENSE
+├──.gitinore
+└── requirements.txt
 
-## Exploration Questions
-### The following questions are explored in this case study:
-+ First 10 users on the platform
-+ Total number of registrations
-+ Total number of posts
-+ Number of Sign-ins per Day
-+ Inactive users.
-+ Most likes on a photo
-+ Number of photo posted by most active users
-+ Most popular tag names by usage
-+ Most popular tag names by likes
-+ Users who have liked every single photo on the plaftform
-+ Percentage of user who have either never commented on a photo or likes every photo
-+ Total Years on the platform 
-----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
