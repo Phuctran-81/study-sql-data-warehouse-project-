@@ -114,7 +114,7 @@ BEGIN
         
         SET @start_time = GETDATE();
         PRINT '>> Truncating Table: bronze.px_cat_g1v2';
-        TRUNCATE TABLE bronze.px_cat_g1v2;
+        TRUNCATE TABLE bronze.erp_px_cat_g1v2;
         
         PRINT '>> Insert Data into: bronze.erp_px_cat_g1v2';
         BULK INSERT bronze.erp_px_cat_g1v2
