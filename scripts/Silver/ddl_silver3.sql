@@ -66,7 +66,7 @@ CREATE TABLE silver.erp_cust_az12 (
   );
 GO
 
-IF OBJECTID ('silver.erp_loc_a101','U') IS NOT NULL
+IF OBJECT_ID ('silver.erp_loc_a101','U') IS NOT NULL
     DROP TABLE silver.erp_loc_a101;
 GO
 
