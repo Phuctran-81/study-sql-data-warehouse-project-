@@ -27,10 +27,11 @@
 | product_number | NVARCHAR | A structured alphanumeric code representing the product, often used for categorization or inventory. |
 | product_name | NVARCHAR | Descriptive name of the product, including key details such as type, color, and size. |
 | category_id | NVARCHAR | A unique identifier for the product's category, linking to its high-level classification. |
+| category_name | NVARCHAR | A detailed classification of the product. |
 | subcategory_name | NVARCHAR | A more detailed classification of the product within the category, such as product type. |
-| maintenance | NVARCHAR | Indicates whether the product requires maintenance (e.g., 'Yes', 'No') |
-| cost | INT | The cost or base price of the product, measured in monetary units |
+| product_cost | INT | The cost or base price of the product, measured in monetary units |
 | product_line | NVARCHAR | The specific product line or series to which the product belongs (e.g., Road, Mountain). |
+| maintenance | NVARCHAR | Indicates whether the product requires maintenance (e.g., 'Yes', 'No') |
 | start_date | DATE | The date when the product became available for sale or use, stored in |
 
 ## 3. gold.fact_sales
