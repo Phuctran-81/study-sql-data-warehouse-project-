@@ -23,8 +23,10 @@ This project involves:
 - Data Modeling
 - Data Analytics
 ---
-## Important Links & Tools
+## Datasets and tools used: 
 - **[Datasets](datasets/):** Access to the project dataset (csv files).
+- **Database:** SQL Server Management Studio 21.
+- **draw.io:** draw data architecture, data flow ...
 - **[Notion](https://www.notion.so/Data-Warehouse-Project-2ccabe17155980398c99fe9dffcdf0c4?source=copy_link):** Access to All Project Phases and Tasks.  
 ---
 ## Project Requirements
