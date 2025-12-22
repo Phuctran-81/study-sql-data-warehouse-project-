@@ -24,16 +24,16 @@ GO
 CREATE VIEW gold.dim_customers AS
 SELECT 
 ROW_NUMBER () OVER (ORDER BY cst_id) AS customer_key,
-cst_id								 AS customer_id,
-cst_key								 AS customer_number,
-cst_firstname						 AS first_name,
-cst_lastname						 AS last_name,
-cst_marital_status					 AS marital_status,
-CASE WHEN cst_gndr = 'n/a' THEN gen ELSE cst_gndr
+i.cst_id							 AS customer_id,
+i.cst_key							 AS customer_number,
+i.cst_firstname						 AS first_name,
+i.cst_lastname						 AS last_name,
+i.cst_marital_status				 AS marital_status,
+CASE WHEN i.cst_gndr = 'n/a' THEN a.gen ELSE i.cst_gndr
 							END		 AS gender,
-bdate								 AS birth_date,
-cntry								 AS country,
-cst_create_date						 AS create_date
+a.bdate								 AS birth_date,
+l.cntry								 AS country,
+i.cst_create_date					 AS create_date
 FROM silver.crm_cust_info i
 LEFT JOIN silver.erp_cust_az12 a
 ON i.cst_key = a.cid
@@ -53,16 +53,16 @@ GO
 CREATE VIEW gold.dim_products AS 
 SELECT
 ROW_NUMBER () OVER (ORDER BY prd_start_dt, prd_key) AS product_key,
-prd_id			AS product_id,
-prd_key			AS product_number,
-prd_nm			AS product_name,
-cat_id		    AS category_id,
+i.prd_id		AS product_id,
+i.prd_key		AS product_number,
+i.prd_nm		AS product_name,
+i.cat_id		AS category_id,
 c.cat			AS category_name,
 c.subcat		AS subcategory_name,
-prd_cost		AS product_cost,
-prd_line		AS product_line,
-maintenance		AS maintenance,
-prd_start_dt    AS product_start_date
+i.prd_cost		AS product_cost,
+i.prd_line		AS product_line,
+c.maintenance	AS maintenance,
+i.prd_start_dt  AS product_start_date
 FROM silver.crm_prd_info i
 LEFT JOIN silver.erp_px_cat_g1v2 c
 ON i.cat_id = c.id
@@ -80,15 +80,15 @@ GO
 
 CREATE VIEW gold.fact_sales AS
 SELECT 
-sls_ord_num			AS order_number,
+s.sls_ord_num		AS order_number,
 c.customer_key		AS customer_key,
 p.product_key		AS product_key,
-sls_order_dt		AS order_date,
-sls_ship_dt			AS shipping_date,
-sls_due_dt			AS due_date,
-sls_sales           AS sales_amount,
-sls_quantity		AS quantity,
-sls_price			AS price
+s.sls_order_dt		AS order_date,
+s.sls_ship_dt		AS shipping_date,
+s.sls_due_dt		AS due_date,
+s.sls_sales          AS sales_amount,
+s.sls_quantity		AS quantity,
+s.sls_price			AS price
 FROM silver.crm_sales_details s
 LEFT JOIN gold.dim_customers c
 ON c.customer_id = s.sls_cust_id
