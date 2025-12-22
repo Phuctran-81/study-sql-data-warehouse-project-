@@ -1,4 +1,4 @@
-# Data Warehouse Proect
+# Data Warehouse Project
 This Data Warehouse project demonstrates building a comprehensive data warehouse to generating actionable insights.
 ---
 ## Data Architecture
