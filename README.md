@@ -21,7 +21,6 @@ This project involves:
 - Data Engineering
 - ETL Pipeline Developer
 - Data Modeling
-- Data Analytics
 ---
 ## Datasets and tools used: 
 - **[Datasets](datasets/):** Access to the project dataset (csv files).
