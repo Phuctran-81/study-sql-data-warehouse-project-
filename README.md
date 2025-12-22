@@ -24,9 +24,8 @@ This project involves:
 - Data Analytics
 ---
 ## Important Links & Tools
-- Datasets:
-- DrawIO:
-- Notion:
+- **[Datasets](datasets/):** Access to the project dataset (csv files).
+- **[Notion](https://www.notion.so/Data-Warehouse-Project-2ccabe17155980398c99fe9dffcdf0c4?source=copy_link):** Access to All Project Phases and Tasks.  
 ---
 ## Project Requirements
 ### Building the Data Warehouse (Data Engineering)
