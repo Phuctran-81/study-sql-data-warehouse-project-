@@ -10,10 +10,10 @@
 | customer_number | NVARCHAR | Alphanumeric identifier representing the customer, used for tracking and referencing. |
 | first_name | NVARCHAR | The customer's first name, as recorded in the system. |
 | last_name | NVARCHAR | The customer's last name or family name. |
-| country | NVARCHAR | The country of residence for the customer (e.g., 'Australia'). |
 | marital_status | NVARCHAR | The marital status of the customer (e.g., 'Married', 'Single'). |
 | gender | NVARCHAR | The gender of customer (e.g., 'Male', 'Female') |
 | birthdate | DATE | The date of birth of the customer, formatted as YYYY-MM-DD (e.g., 1971-10-06). |
+| country | NVARCHAR | The country of residence for the customer (e.g., 'Australia'). |
 | create_date | DATE | The date and time when the customer record was created in the system. |
 
 ## 2. gold.dim_products
